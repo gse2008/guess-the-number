@@ -4,25 +4,31 @@
 </head>
 <body>
 	<script>
-        let num = Math.floor(Math.random() * 11);
-
-        let guess = prompt("Guess a number between 1 and 10");
-
+        let num = Math.floor(Math.random() * 101)+1;
+        let guess = prompt("Guess a number between 1 and 100");
         let gotIt=false;
+        let numGuesses=0;
 
         while(gotIt===false){
-           
+           numGuesses++;
         if(num==guess)
         {
             //alert("Got It!");
             gotIt=true;//break out of loop
         }else{//continue, since answer is incorrect!
-            guess=prompt("Guess Again!");
+            if(num>guess){
+            guess=prompt("Higher!")
+            
+        }else{
+           guess= prompt("Lower!")
+            }
+
+            //guess=prompt("Guess Again!");
             
         }
 
         }
-        alert("Got It!")
+        alert("Got It! The correct number was "+ num +" and you guessed " + numGuesses + " times!")
         //alert("Sorry! You guessed " + guess + " and the number was "+ num)
         
 	</script>
