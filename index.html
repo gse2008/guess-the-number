@@ -1,5 +1,31 @@
+<!DOCTYPE html>
 <html>
+<head>
+</head>
 <body>
-<h1>Guess the Number!</h1>
+	<script>
+        let num = Math.floor(Math.random() * 11);
+
+        let guess = prompt("Guess a number between 1 and 10");
+
+        let gotIt=false;
+
+        while(gotIt===false){
+           
+        if(num==guess)
+        {
+            //alert("Got It!");
+            gotIt=true;//break out of loop
+        }else{//continue, since answer is incorrect!
+            guess=prompt("Guess Again!");
+            
+        }
+
+        }
+        alert("Got It!")
+        //alert("Sorry! You guessed " + guess + " and the number was "+ num)
+        
+	</script>
 </body>
 </html>
+
